@@ -1,7 +1,290 @@
 <!DOCTYPE html>
 <html>
+<title>Climate Change</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-orange w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Samita<br>Pradhan</b><br>Capstone Project</h3>	
+  </div>
+  <div class="w3-bar-block">
+    <a href="#overview" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Overview</a> 
+    <a href="#change" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">The change</a> 
+    <a href="#most" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Most Polluted</a> 
+    <a href="#least" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Least Polluted</a> 
+    <a href="#forecast" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Temperature Forecast</a>
+	<a href="#conclusion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Conclusion</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-orange w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-orange w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Samita Pradhan</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="overview">
+    <h1 class="w3-jumbo"><b>A visual approach</b><br></h1><h2> to analyze role of pollution in climate changes.</h2>
+    <h1 class="w3-xxxlarge w3-text-orange"><b>Overview.</b></h1>
+    <hr style="width:50px;border:5px solid orange" class="w3-round">
+	<p> This webpage helps users to compare temperature changes occurred over the years in most polluted countries and least polluted countries in the world, to identify if there is any relation between pollution and global warming. The most polluted and least polluted countries’ list is obtained from an article published by ‘The Telegraph’ on January 2nd, 2017. This system is mainly divided in three sections, first section focuses on visualizing temperature changes in most polluted countries, second section focuses on least polluted countries and third section focuses on forecasting and visualizing predicted temperature in future based on the available historic data. </p>
+  </div>
+
+  <!-- change -->
+  <div class="w3-container" id="change" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-orange"><b>The change.</b></h1>
+    <hr style="width:50px;border:5px solid orange" class="w3-round">
+    <p>Below are two visualization compared in-order to analyze the change in average temperature after a century. On the left is the world graph
+	visualizing the average temperature before the year 1900. This includes all the data avaibable for a given country before 1900. Most of them 
+	date back to 1800s</p>
+	<p>On the right is the graph showing similar data but from the year 2000 onwards.</p>
+	
+    <div class="w3-row-padding">
+		<div class="w3-half w3-margin-bottom">
+		  <ul class="w3-ul w3-light-grey w3-center">
+			<li class="w3-dark-grey w3-xlarge w3-padding-32">Pre 1900</li>
+			<li class="w3-padding-16">
+				<div>
+					<a href="https://plot.ly/~pradhansamita2093/36/?share_key=GShfRX24aj8moZ1Ah6kRWm"
+						target="_blank" title="Plot 36" style="display: block; text-align: center;">
+						<img src="https://plot.ly/~pradhansamita2093/36.png?share_key=GShfRX24aj8moZ1Ah6kRWm"
+						alt="Plot 36" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+					</a>
+					<script data-plotly="pradhansamita2093:36" sharekey-plotly="GShfRX24aj8moZ1Ah6kRWm" src="https://plot.ly/embed.js" async></script>
+				</div>
+			</li>
+		  </ul>
+		</div>
+			
+		<div class="w3-half">
+		  <ul class="w3-ul w3-light-grey w3-center">
+			<li class="w3-orange w3-xlarge w3-padding-32">Post 2000</li>
+			<li class="w3-padding-16">
+				<div>
+					<a href="https://plot.ly/~pradhansamita2093/34/?share_key=NGjkfxbKzf2YQxG0sWJsR2" 
+						target="_blank" title="Plot 34" style="display: block; text-align: center;">
+						<img src="https://plot.ly/~pradhansamita2093/34.png?share_key=NGjkfxbKzf2YQxG0sWJsR2" 
+						alt="Plot 34" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" />
+					</a>
+					<script data-plotly="pradhansamita2093:34" sharekey-plotly="NGjkfxbKzf2YQxG0sWJsR2" src="https://plot.ly/embed.js" async></script>
+				</div>
+			</li>
+		  </ul>
+		</div>
+    </div>
+
+  </div>
+  
+  <!-- Most polluted -->
+  <div class="w3-container" id="most" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-orange"><b>Most polluted.</b></h1>
+    <hr style="width:50px;border:5px solid orange" class="w3-round">
+        <p>The following section focuses on visualization of temperature changes in most polluted countries. Most polluted countries includes Afghanistan, Bahrain, Bangladesh,
+		China, India, Egypt, Ghana, Jordan, Mongolia, Nepal, Pakistan, Portugal, Qatar, Senegal, Spain, Turkey and United Arab Emirates.
+    </p>
+    </div>
+	<p><h3> Average Temperature Changes</h3></P><br>
+	<img src="MPMeanTableau.jpg"> <br> <br>
+
+  <!-- Most Polluted-->
+    <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>China</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/64/?share_key=VhBB93vP5IpHooqR49uunr" target="_blank" title="Plot 64" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/64.png?share_key=VhBB93vP5IpHooqR49uunr" alt="Plot 64" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:64" sharekey-plotly="VhBB93vP5IpHooqR49uunr" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Qatar</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/66/?share_key=MNBlKZNKTSGUl9yqU6ZQrQ" target="_blank" title="Plot 66" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/66.png?share_key=MNBlKZNKTSGUl9yqU6ZQrQ" alt="Plot 66" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:66" sharekey-plotly="MNBlKZNKTSGUl9yqU6ZQrQ" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Pakistan</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/60/?share_key=W1KEL5XOTHnGl1NZaRgnua" target="_blank" title="Plot 60" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/60.png?share_key=W1KEL5XOTHnGl1NZaRgnua" alt="Plot 60" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:60" sharekey-plotly="W1KEL5XOTHnGl1NZaRgnua" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>India</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/58/?share_key=rWG9PX34AltUIGVlxXY7t6" target="_blank" title="Plot 58" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/58.png?share_key=rWG9PX34AltUIGVlxXY7t6" alt="Plot 58" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:58" sharekey-plotly="rWG9PX34AltUIGVlxXY7t6" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Afghanistan</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/50/?share_key=akWdH1bkRXJGiak9Ep25aQ" target="_blank" title="Plot 50" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/50.png?share_key=akWdH1bkRXJGiak9Ep25aQ" alt="Plot 50" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:50" sharekey-plotly="akWdH1bkRXJGiak9Ep25aQ" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  <!-- Least polluted -->
+  <div class="w3-container" id="least" style="margin-top:75px">
+  
+    <h1 class="w3-xxxlarge w3-text-orange"><b>Least polluted.</b></h1>
+    <hr style="width:50px;border:5px solid orange" class="w3-round">
+        <p>The following section focuses on visualization of temperature changes in least polluted countries. Least polluted countries includes Australia, Bhutan, Canada, Estonia, Finland,
+		Iceland, Japan, Liberia, Malta, Monaco, New Zealand, Norway, Portugal, Spain and United States.
+    </p>
+   </div>
+   	<img src="LPMeanTableau.jpg"> <br> <br>
+   
+   <!-- Least Polluted-->
+   <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Australia</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/38/?share_key=xjFk23WTrSXuaJ3AznhWbn" target="_blank" title="Plot 38" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/38.png?share_key=xjFk23WTrSXuaJ3AznhWbn" alt="Plot 38" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:38" sharekey-plotly="xjFk23WTrSXuaJ3AznhWbn" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>New Zealand</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/40/?share_key=ize3g8o8d5HWKlSHeGTtDj" target="_blank" title="Plot 40" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/40.png?share_key=ize3g8o8d5HWKlSHeGTtDj" alt="Plot 40" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:40" sharekey-plotly="ize3g8o8d5HWKlSHeGTtDj" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Canada</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/62/?share_key=raiIVqnGlwkCcUah5gsoPn" target="_blank" title="Plot 62" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/62.png?share_key=raiIVqnGlwkCcUah5gsoPn" alt="Plot 62" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:62" sharekey-plotly="raiIVqnGlwkCcUah5gsoPn" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Estonia</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/68/?share_key=2xUmKDAjeq0XFPWPVCIWXC" target="_blank" title="Plot 68" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/68.png?share_key=2xUmKDAjeq0XFPWPVCIWXC" alt="Plot 68" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:68" sharekey-plotly="2xUmKDAjeq0XFPWPVCIWXC" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <div class="w3-container w3-padding-16">
+			<p><b>Finland</b></p>
+			<div>
+				<a href="https://plot.ly/~pradhansamita2093/70/?share_key=U4xfwgOB4BauhDSB4ErxNG" target="_blank" title="Plot 70" style="display: block; text-align: center;"><img src="https://plot.ly/~pradhansamita2093/70.png?share_key=U4xfwgOB4BauhDSB4ErxNG" alt="Plot 70" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+				<script data-plotly="pradhansamita2093:70" sharekey-plotly="U4xfwgOB4BauhDSB4ErxNG" src="https://plot.ly/embed.js" async></script>
+			</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Forecast -->
+  <div class="w3-container" id="forecast" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-orange"><b>Forecast.</b></h1>
+    <hr style="width:50px;border:5px solid orange" class="w3-round">
+    <p></p>
+	
+	<img src="China.png" height="500" width="700"> <br> <hr>
+	<img src="Pakistan.png" height="500" width="700"> <br> <hr>
+	<img src="Greenland.png" height="500" width="700"> <br> <hr>
+  </div>
+  
+  <!-- Conclusion-->
+  <div class="w3-container" id="conclusion" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-orange"><b>Conclusion.</b></h1>
+    <hr style="width:50px;border:5px solid orange" class="w3-round">
+    <p>In all the graphs we can see fluctuations in earth’s surface temperatures over the years, however there is a significant growth in temperature some of the most polluted countries as compared to the least polluted countries over the years. Also on the other hand even in least polluted countries like Australia, New Zealand and Greenland etc. temperature has increased and is still increasing. Therefore, based on the historic data and visualizations we can conclude that pollution created by some countries are not just affecting temperature change in only those countries, but is impacting warming of the planet globally. </p>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
 </body>
 </html>
